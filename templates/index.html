@@ -1,0 +1,19 @@
+{% block head %}
+<link href="http://vjs.zencdn.net/5.10.8/video-js.css" rel="stylesheet">
+<link href="https://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+<link href="/static/css/index.css" rel="stylesheet">
+<script src={{ settings.source_url|tojson }}></script>
+{% endblock %}
+
+{% block body %}
+
+<video class="video-js .vjs-default-skin" id="videoPlayer" autoplay controls>
+  <source src="https://static.onpamall.com/test/marupen_madonna.mp4" type="video/mp4">
+</video>
+<input type="button" value="test button" onclick="videoJsTest();">
+
+<script src="http://vjs.zencdn.net/5.10.8/video.js"></script>
+<script src="/static/js/videojs-contrib-hls.min.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+
+{% endblock %}
